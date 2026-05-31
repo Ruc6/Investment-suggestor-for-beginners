@@ -5,9 +5,9 @@ from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import String
 from sqlalchemy import Float
-DATABASE_URL = (
-    "postgresql://postgres:Ruc%405006@localhost:5432/userbd"
-)
+import os
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 
 engine = create_engine(DATABASE_URL)
