@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Investment suggestor 
+        </title>
+        <link
+        rel="stylesheet"
+        href="style.css"
+        >
+
+    </head>
+    <body>
+        <div class="Container">
+            <input
+            type="number"
+            id="age"
+            placeholder="How many year have you seen this world?"
+            >
+            <input
+            type="number"
+            id="income"
+            placeholder="How much you earn per month?"
+            >
+            <select id="risk">
+             <option value="high">
+                High Risk
+             </option>
+             <option value="medium">
+                Mid Risk
+             </option>
+             <option value="low">
+                Low Risk
+             </option>
+            </select>
+            <input
+            type="number"
+            id="period"
+            placeholder="Investment Period"
+        >
+        <button onclick="getRecommendation()">
+            Generate Recommendation
+        </button>
+        <div id="output"></div>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

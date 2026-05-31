@@ -1,0 +1,51 @@
+body{
+     background-color: #fee7c1;
+
+    font-family: Arial;
+
+    color: rgb(0, 0, 0);
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 50px;
+}
+.container {
+
+    width: 500px;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    background-color: #31568b;
+}
+input,
+select,
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border-radius: 6px;
+
+    border: none;
+}
+button{
+   
+     background-color: aqua;
+
+    color: black;
+
+    cursor: pointer;
+}
+#output {
+
+    margin-top: 20px;
+
+    white-space: pre-wrap;
+}
