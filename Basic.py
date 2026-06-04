@@ -104,7 +104,13 @@ def suggestor(x: Input):
 
         final,
 
-        build_market_summary(),
+        {
+        "positive_news": 0,
+        "negative_news": 0,
+        "neutral_news": 0,
+        "news_analysis": []
+    },
+
 
         stock_recommendations
     )
