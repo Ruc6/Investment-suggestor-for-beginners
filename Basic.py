@@ -15,9 +15,9 @@ from recommendation import (
     stock_amount
 )
 
-from sentiment import (
-    build_market_summary
-)
+#from sentiment import (
+   # build_market_summary
+#)
 
 from prompt import (
     build_prompt
