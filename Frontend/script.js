@@ -5,7 +5,7 @@ async function getRecommendation(){
     const investment_period=document.getElementById("period").value;
     const response = await fetch(
 
-        "http://127.0.0.1:8000/recommend",
+        "https://investment-suggestor-for-beginners-production.up.railway.app/recommend",
 
         {
             method: "POST",
