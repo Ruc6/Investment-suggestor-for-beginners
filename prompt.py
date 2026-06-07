@@ -7,14 +7,14 @@ def build_prompt(
 
     allocation,
 
-    market_summary,
+    market_context,
 
     stock_recommendations
 ):
 
     query = (
 
-        f"Evaluate user allocations as {allocation} "
+        f"User allocations as {allocation} "
         f"and these stock allotment "
         f"{stock_recommendations}"
     )
@@ -22,7 +22,7 @@ def build_prompt(
     context = retrieve_context(
         query
     )
-
+   
     prompt = f"""
 
 USER PROFILE:
@@ -34,8 +34,8 @@ PORTFOLIO ALLOCATION:
 RECOMMENDED STOCKS:
 {stock_recommendations}
 
-CURRENT MARKET SUMMARY:
-{market_summary}
+CURRENT MARKET TOP NEWS:
+{market_context}
 
 FINANCIAL KNOWLEDGE:
 {context}

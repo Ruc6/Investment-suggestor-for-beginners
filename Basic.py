@@ -6,7 +6,7 @@ from finance import (
     calculate_emergency_fund,
     calculate_monthly_investment
 )
-
+from ragmar import retrieve_market
 from recommendation import (
     
     recommend_fd,
@@ -47,7 +47,7 @@ class Input(BaseModel):
     investment_period: int = Field(
         default=1,
         ge=1,
-        le=12
+        le=5
     )
 
 
@@ -92,7 +92,12 @@ def suggestor(x: Input):
         x.investment_period
     )
 )
-
+    market_context = retrieve_market(
+    f"Risk profile {risk} "
+    f"investment period {x.investment_period} years "
+    f"allocation {final} "
+    f"stocks {stock_recommendations}"
+)
     prompt = build_prompt(
 
         {
@@ -104,12 +109,7 @@ def suggestor(x: Input):
 
         final,
 
-        {
-        "positive_news": 0,
-        "negative_news": 0,
-        "neutral_news": 0,
-        "news_analysis": []
-    },
+        market_context,
 
 
         stock_recommendations
