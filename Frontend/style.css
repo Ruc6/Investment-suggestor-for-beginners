@@ -20,6 +20,10 @@ body{
     border-radius: 10px;
 
     background-color: #31568b;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
 }
 input,
 select,
@@ -59,5 +63,15 @@ button{
 
     min-height: 50px;
 
+    max-height: 350px;
+
     color: #333;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    font-size: 13px;
+
+    line-height: 1.4;
 }
