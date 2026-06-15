@@ -49,12 +49,12 @@ button{
 }
 #output {
 
+    margin-top: 20px;
 
     white-space: pre-wrap;
 
     background-color: #ffffff;
-    width: calc(100% - 20px);
-    margin: 20px auto 0 auto;
+
    
 
     padding: 10px;
